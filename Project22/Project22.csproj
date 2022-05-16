@@ -13,15 +13,13 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Domain\" />
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
-    <None Include="Views\Shared\CssPartial.cshtml" />
+    <None Include="Views\Home\CssPartial.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
