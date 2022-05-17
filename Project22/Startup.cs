@@ -57,18 +57,17 @@ namespace Project22
                 options.SlidingExpiration = true;
             });
 
-         /*   //налаштування політики авторизації для Admin area
+            //налаштування політики авторизації для Admin area
             services.AddAuthorization(x =>
             {
                 x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
-            });*/
+            });
 
             //додаємо сервіси для контролера (MVC) 
-            services.AddControllersWithViews()
-                /*(x =>
-            {
-                x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
-            })*/
+            services.AddControllersWithViews(x =>
+                {
+                   x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
+                })
                 //виставляємо сумісність із asp.net core 3.0
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
@@ -93,7 +92,7 @@ namespace Project22
             //реєструємо потрібні маршрути
             app.UseEndpoints(endpoints =>
             {
-               // endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
