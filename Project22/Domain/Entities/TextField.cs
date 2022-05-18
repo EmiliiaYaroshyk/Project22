@@ -12,7 +12,7 @@ namespace Project22.Domain.Entities
         public string CodeWord { get; set; }
 
         [Display(Name = "Назва сторінки (заголовок)")]
-        public override string Title { get; set; } = "Інфоормаційна сторінка";
+        public override string Title { get; set; } = "Інформаційна сторінка";
 
         [Display(Name = "Вміст сторінки")]
         public override string Text { get; set; } = "Вміст заповнюється адміністратором";

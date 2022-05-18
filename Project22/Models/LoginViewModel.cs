@@ -13,7 +13,7 @@ namespace Project22.Models
         [Display(Name = "Пароль")]
         public string Password { get; set; }
 
-        [Display(Name = "Запам`ятати?")]
+        [Display(Name = "Запам`ятати дані?")]
         public bool RememberMe { get; set; }
     }
 }
