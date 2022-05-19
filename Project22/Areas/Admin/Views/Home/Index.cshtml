@@ -7,9 +7,9 @@
 <div>
     <h2>@strTitle</h2>
     <div>
-        <h3>Наші послуги</h3>
+        <h3>Новини</h3>
         <div class="div-box">
-            <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">Додати послугу</a>
+            <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">Додати новину</a>
         </div>
         @if (Model.Any())
         {
@@ -35,7 +35,7 @@
     <div class="div-box">
         <h3>Редагувати сторінку сайту</h3>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageIndex">Головна</a>
-        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageServices">Наші послуги</a>
+        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageServices">Новини</a>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageContacts">Контакти</a>
     </div>
     <div class="div-box">
